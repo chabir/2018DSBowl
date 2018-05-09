@@ -1,11 +1,27 @@
-AUC: use average of standardise rank
+Metrics
+  1. AUC: use average of standardise rank
+          don’t need all raws as looking for rank especially if a category is not present in test  
 
-NN:
-use binary file to load 
-use time delta if not rnn friendly
-use rnn with batch of 1
 
 Feature engineering for time series:
-  1. tool: big data sql instead of dask to create features
-  2. type: count, cumcount (NA with mean), time delta (replace NA with max) (see TalkingData kernels)
+
+  2. type: count, cumcount (NA with mean), time delta (replace NA with max) 
+  3. Groupby, count,... :see TalkingData kernels for pandas possibilities
+  4. Time delta: be careful of timing test / train: readjust calculation of features to a day window if too many NAs
+  5. keep an eye on duplicates for patterns (imagine how dataset was build)
+  
+Large Datasets Tools:
+1. Dask: pandas based
+2. Big Query: Google SQL (fast!)
+3. memo
+
+Models:
+1. NN:
+  use binary file to load 
+  use time delta if not rnn friendly
+  use rnn with batch of 1
+2. Trees:
+  Try Dart (drop out) instead of traditional gbtree
+
+
   
