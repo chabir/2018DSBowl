@@ -7,4 +7,5 @@ use rnn with batch of 1
 
 Feature engineering for time series:
   1. tool: big data sql instead of dask to create features
-  2. type: count, cumcount (NA with mean), time delta (NA with max)
+  2. type: count, cumcount (NA with mean), time delta (replace NA with max) (see TalkingData kernels)
+  
