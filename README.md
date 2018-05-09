@@ -1,1 +1,1 @@
-# 2018DSBowl
+# Kaggle notes
