@@ -14,7 +14,11 @@ Feature engineering for time series:
       whenever a batch of feature decrease score - I will remove the most import features among this batch according to LightGBM, and re-test
       whenever features were not used by LightGBM at all i.e. 0 importance score I will drop them.
 
-  
+
+Categorical variable:
+# https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63  for high cardinal
+
+
 Large Datasets Tools:
 1. Dask: pandas based
 2. Big Query: Google SQL (fast!)
@@ -25,6 +29,8 @@ Models:
   use binary file to load 
   use time delta if not rnn friendly
   use rnn with batch of 1
+  use rankgaussian for normalization (see porto seguro)
+  
 2. Trees:
   Try Dart (drop out) instead of traditional gbtree
 
