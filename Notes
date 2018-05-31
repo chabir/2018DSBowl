@@ -30,6 +30,7 @@ Models:
   use time delta if not rnn friendly
   use rnn with batch of 1
   use rankgaussian for normalization (see porto seguro)
+  use binary files such as np mmap with an holder in the train generator to prevent memory increase
   
 2. Trees:
   Try Dart (drop out) instead of traditional gbtree
